@@ -21,8 +21,9 @@
             android:orientation="vertical">
 
             <android.support.constraint.ConstraintLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp">
 
                 <TextView
                     android:id="@+id/textview_filter_id"
@@ -39,12 +40,8 @@
                 <Button
                     android:id="@+id/button_huy_id"
                     android:layout_width="wrap_content"
-                    android:layout_height="33dp"
-                    android:layout_marginStart="316dp"
-                    android:layout_marginLeft="316dp"
-                    android:layout_marginTop="18dp"
-                    android:layout_marginEnd="4dp"
-                    android:layout_marginRight="4dp"
+                    android:layout_height="27dp"
+                    android:layout_marginTop="16dp"
                     android:background="#00ffffff"
                     android:gravity="end"
                     android:text="Hủy"
@@ -52,8 +49,6 @@
                     android:textColor="@color/colorPrimary"
                     android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </android.support.constraint.ConstraintLayout>
 
@@ -100,7 +95,6 @@
                 app:max_value="100"
                 android:id="@+id/seekbar_pricerange_id"/>
 
-
             <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -132,7 +126,6 @@
 
             </android.support.constraint.ConstraintLayout>
 
-
             <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -150,7 +143,7 @@
 
                 <Button
                     android:id="@+id/button_wifi_id"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_marginTop="6dp"
                     android:background="@drawable/custom_button_filter_tienich_choosenitems"
@@ -162,13 +155,15 @@
                     android:textAllCaps="false"
                     android:textColor="@color/colorAccent"
                     android:textSize="15sp"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent=".48"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textview_tienich_id"
                     tools:ignore="RtlCompat" />
 
                 <Button
                     android:id="@+id/button_bep_id"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_marginTop="36dp"
                     android:background="@drawable/custom_button_filter_tienich_unchoosenitems"
@@ -180,13 +175,15 @@
                     android:textAllCaps="false"
                     android:textColor="#262628"
                     android:textSize="15sp"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent=".48"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="RtlCompat" />
 
                 <Button
                     android:id="@+id/button_airconditioner_id"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_marginTop="10dp"
                     android:background="@drawable/custom_button_filter_tienich_choosenitems"
@@ -198,13 +195,15 @@
                     android:textAllCaps="false"
                     android:textColor="@color/colorAccent"
                     android:textSize="15sp"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent=".48"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/button_wifi_id"
                     tools:ignore="RtlCompat" />
 
                 <Button
                     android:id="@+id/button_parkingplace_id"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_marginTop="10dp"
                     android:background="@drawable/custom_button_filter_tienich_choosenitems"
@@ -216,13 +215,15 @@
                     android:textAllCaps="false"
                     android:textColor="@color/colorAccent"
                     android:textSize="15sp"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent=".48"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/button_bep_id"
                     tools:ignore="RtlCompat" />
 
                 <Button
                     android:id="@+id/button_hotshower_id"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_marginTop="10dp"
                     android:background="@drawable/custom_button_filter_tienich_unchoosenitems"
@@ -233,13 +234,15 @@
                     android:textAllCaps="false"
                     android:textColor="@color/colorBlackText"
                     android:textSize="15sp"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent=".48"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/button_airconditioner_id"
                     tools:ignore="RtlCompat" />
 
                 <Button
                     android:id="@+id/button_tv_id"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_marginTop="10dp"
                     android:background="@drawable/custom_button_filter_tienich_unchoosenitems"
@@ -250,13 +253,15 @@
                     android:textAllCaps="false"
                     android:textColor="@color/colorBlackText"
                     android:textSize="15sp"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent=".48"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/button_parkingplace_id"
                     tools:ignore="RtlCompat" />
 
                 <Button
                     android:id="@+id/button_swimmingpool_id"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_marginTop="10dp"
                     android:background="@drawable/custom_button_filter_tienich_unchoosenitems"
@@ -267,13 +272,15 @@
                     android:textAllCaps="false"
                     android:textColor="@color/colorBlackText"
                     android:textSize="15sp"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent=".48"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/button_hotshower_id"
                     tools:ignore="RtlCompat"/>
 
                 <Button
                     android:id="@+id/button_bar_id"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_marginTop="10dp"
                     android:background="@drawable/custom_button_filter_tienich_unchoosenitems"
@@ -284,6 +291,8 @@
                     android:textAllCaps="false"
                     android:textColor="@color/colorBlackText"
                     android:textSize="15sp"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent=".48"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/button_tv_id"
                     tools:ignore="RtlCompat"/>
@@ -305,6 +314,8 @@
                     android:visibility="invisible"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/button_bar_id" />
+
+
             </android.support.constraint.ConstraintLayout>
 
             <android.support.constraint.ConstraintLayout
@@ -399,6 +410,7 @@
                 app:min_value="1"
                 app:max_value="5"
                 android:id="@+id/seekbar_raterange_id"/>
+
             <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -438,8 +450,6 @@
                 android:background="@drawable/custom_button_filter_apply"
                 android:layout_marginBottom="20dp"/>
 
-
         </LinearLayout>
-
     </ScrollView>
 </LinearLayout>

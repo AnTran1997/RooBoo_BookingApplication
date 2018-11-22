@@ -4,9 +4,9 @@
 
     <solid android:color="@color/colorPrimary"></solid>
 
-    <size
+   <!-- <size
         android:height="40dp"
-        android:width="160dp"></size>
+        android:width="160dp"></size>-->
 
     <corners android:radius="20dp"></corners>
 
