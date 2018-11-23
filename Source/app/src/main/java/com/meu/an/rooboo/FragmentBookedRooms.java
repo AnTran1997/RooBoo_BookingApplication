@@ -19,7 +19,7 @@ public class FragmentBookedRooms extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.booked_rooms,container,false);
+        view = inflater.inflate(R.layout.fragment_booked_rooms,container,false);
         return view;
     }
 }
