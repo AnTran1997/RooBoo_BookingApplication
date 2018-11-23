@@ -25,13 +25,6 @@ public class DangPhong2 extends AppCompatActivity {
         //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_dang_phong2);
 
-        // rounded avatar
-        ImageView avatarImageView = (ImageView)findViewById(R.id.avatarImageView);
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.avatar);
-        RoundedBitmapDrawable rbd = RoundedBitmapDrawableFactory.create(getResources(), bitmap);
-        rbd.setCircular(true);
-        avatarImageView.setImageDrawable(rbd);
-
         tabLayout = (TabLayout)findViewById(R.id.tablayout_id);
         viewPager = (ViewPager)findViewById(R.id.viewpager_id);
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
