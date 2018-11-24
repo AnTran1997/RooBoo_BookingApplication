@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login"
+    android:background="@drawable/app_background"
+
+    >
+
+
+
+    <View
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="250dp"
+        android:background="@color/colorWhite"
+        >
+    </View>
+
+    <TextView
+        android:id="@+id/tvAppName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:height="50dp"
+        android:text="ROO BOO"
+        android:textSize="40dp"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:fontFamily="@font/font_family"
+        />
+
+    <TextView
+        android:id="@+id/tvAppSlogon"
+        android:layout_below="@+id/tvAppName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:height="20dp"
+        android:text="Mang lại cho bạn trải nghiệm tốt nhất"
+        android:textSize="14dp"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:fontFamily="@font/font_family"
+        />
+
+     <LinearLayout
+         android:layout_below="@+id/tvAppSlogon"
+         android:id="@+id/layoutMain"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:orientation="vertical"
+         android:layout_marginTop="32dp"
+         android:layout_marginLeft="16dp"
+         android:layout_marginRight="16dp"
+         android:background="@color/colorBackground"
+         android:weightSum="16"
+         >
+
+              <RelativeLayout
+                 android:layout_marginTop="16dp"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:orientation="vertical"
+                 android:layout_weight="4"
+                 android:weightSum="4"
+                 >
+
+                 <TextView
+                     android:id="@+id/tvUsername"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text="TÊN ĐĂNG NHẬP"
+                     android:textColor="@android:color/black"
+                     android:layout_marginLeft="32dp"
+                     android:textStyle="bold"
+                     android:fontFamily="@font/sfdisplay"
+                     android:textSize="14dp" />
+
+                 <EditText
+
+                     android:layout_below="@+id/tvUsername"
+                     android:layout_width="match_parent"
+                     android:layout_weight="3"
+                     android:layout_height="48dp"
+                     android:layout_marginLeft="32dp"
+                     android:layout_marginTop="8dp"
+                     android:layout_marginRight="32dp"
+                     android:background="@android:color/white"
+                     android:hint="Nhập tên đăng nhập"
+                     android:textStyle="italic"
+                     android:inputType="text"
+                     android:textSize="14sp"
+                     android:paddingLeft="10dp"
+                     />
+
+
+             </RelativeLayout>
+
+
+              <RelativeLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:orientation="vertical"
+                 android:layout_weight="4"
+                 android:weightSum="8"
+                 >
+
+                 <TextView
+                     android:id="@+id/tvPassword"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text="MẬT KHẨU"
+                     android:textColor="@android:color/black"
+                     android:layout_marginLeft="32dp"
+                     android:textStyle="bold"
+                     android:fontFamily="@font/sfdisplay"
+                     android:textSize="14dp" />
+
+                 <EditText
+
+                     android:layout_below="@+id/tvPassword"
+                     android:layout_width="match_parent"
+                     android:layout_weight="3"
+                     android:layout_height="48dp"
+                     android:layout_marginLeft="32dp"
+                     android:layout_marginTop="8dp"
+                     android:layout_marginRight="32dp"
+                     android:background="@android:color/white"
+                     android:hint="Nhập địa điểm. Ví dụ : Hội An ..."
+                     android:textStyle="italic"
+                     android:inputType="text"
+                     android:textSize="14sp"
+                     android:paddingLeft="10dp"
+
+                     />
+              </RelativeLayout>
+
+             <RelativeLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:orientation="vertical"
+                 android:layout_weight="4"
+                 android:weightSum="8"
+                 >
+
+                 <TextView
+                     android:id="@+id/tvForgotPassowrd"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text="Quên mật khẩu?"
+                     android:textColor="@android:color/darker_gray"
+                     android:layout_marginLeft="32dp"
+                     android:fontFamily="@font/sfdisplay"
+                     android:textStyle="normal"
+                     android:textSize="14dp" />
+
+                 <Button
+                     android:layout_below="@+id/tvForgotPassowrd"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginTop="12dp"
+                     android:layout_marginLeft="32dp"
+                     android:layout_marginRight="32dp"
+                     android:height="40dp"
+                     android:background="#2ACCFF"
+                     android:textColor="@color/colorWhite"
+                     android:text="ĐĂNG NHẬP"
+
+                     />
+
+
+             </RelativeLayout>
+
+              <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical"
+             android:layout_weight="4"
+             android:weightSum="8"
+             >
+
+             <TextView
+                 android:id="@+id/tfAnotherLogin"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:text="Hoặc đăng nhập b"
+                 android:textColor="@android:color/darker_gray"
+                 android:fontFamily="@font/sfdisplay"
+                 android:textAlignment="center"
+                 android:textStyle="normal"
+                 android:textSize="14dp" />
+
+             <LinearLayout
+                 android:layout_below="@id/tfAnotherLogin"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="vertical"
+                 android:layout_marginTop="8dp"
+                 android:weightSum="16"
+                 android:layout_marginBottom="8dp"
+                 >
+
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="10"
+                     android:orientation="horizontal"
+                     android:layout_marginLeft="32dp"
+                     android:layout_marginRight="32dp"
+                     >
+
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:layout_weight="5"
+                         >
+                         <Button
+
+                             android:layout_width="match_parent"
+                             android:layout_height="match_parent"
+                             android:background="#3B5998"
+                             android:layout_marginRight="8dp"
+                             android:text="Facebook"
+                             android:textColor="@color/colorWhite"
+                             android:textStyle="bold"
+                             android:paddingLeft="8dp"
+                             android:drawableLeft="@drawable/ic_facebook"
+
+                             ></Button>
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:layout_weight="5"
+                         >
+                         <Button
+                             android:layout_width="match_parent"
+                             android:layout_height="match_parent"
+                             android:background="@color/colorWhite"
+                             android:layout_marginLeft="8dp"
+                             android:text="Google"
+                             android:textStyle="bold"
+                             android:paddingLeft="8dp"
+                             android:drawableLeft="@drawable/ic_google"
+                             ></Button>
+                     </LinearLayout>
+
+
+                 </LinearLayout>
+
+                 <TextView
+                     android:layout_marginTop="8dp"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:layout_weight="6"
+                     android:textAlignment="center"
+                     android:text="Bạn chưa có tài khoản? Đăng ký"
+                     android:textSize="14dp"
+                     android:textStyle="bold"
+                     android:textColor="#2ACCFF"
+                     android:fontFamily="@font/sfdisplay"
+                     />
+             </LinearLayout>
+
+
+         </RelativeLayout>
+
+
+
+
+
+     </LinearLayout>
+
+
+
+
+
+</RelativeLayout>
