@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
-        android:id="@+id/headerLabel"
+        android:id="@+id/dangphong5_headerLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
@@ -31,7 +31,7 @@
         app:layout_constraintTop_toBottomOf="@+id/headerView" />
 
     <Button
-        android:id="@+id/cancelButton"
+        android:id="@+id/dangphong5_cancelButton"
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="52dp"
         android:layout_height="30dp"

@@ -2,7 +2,6 @@ package com.meu.an.rooboo;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.SeekBar;
 
 public class MainActivity extends AppCompatActivity {
     //SeekBar priceBooking;
@@ -10,7 +9,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_filter_view);
+        setContentView(R.layout.activity_search_view);
 
        /* priceBooking = findViewById(R.id.seekbar_pricerange_id);
 
