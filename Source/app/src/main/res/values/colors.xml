@@ -3,4 +3,10 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#ffffff</color>
+    <color name="colorBackground">#F6F6F6</color>
+    <color name="colorRatingNormal">#008577</color>
+    <color name="colorRatingActive">#2ACCFF</color>
+    <color name="common_border_color">#2ACCFF</color>
+    <color name="sage">#F6F6F6</color>
+
 </resources>
