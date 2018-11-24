@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TimKiem4"
+    android:background="@color/colorAccent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp">
+
+                <TextView
+                    android:id="@+id/textview_filter_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Lọc"
+                    android:textColor="#262628"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/button_huy_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="27dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#00ffffff"
+                    android:gravity="end"
+                    android:text="Hủy"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="8dp"
+                    android:text="KHOẢNG GIÁ"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textview_pricerange_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="4dp"
+                    android:text="200K - 5M"
+                    android:textColor="#262628"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <com.crystal.crystalrangeseekbar.widgets.CrystalRangeSeekbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_color="#EBEBEB"
+                app:bar_highlight_color="@color/colorPrimary"
+                app:left_thumb_color="@color/colorPrimary"
+                app:left_thumb_image="@drawable/rangeseekbar_thump_png"
+                app:right_thumb_image="@drawable/rangeseekbar_thump_png"
+                app:corner_radius="10"
+                app:min_value="0"
+                app:max_value="100"
+                android:id="@+id/seekbar_pricerange_id"/>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="15dp">
+
+                <TextView
+                    android:id="@+id/textview_fromprice_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="4dp"
+                    android:text="200K"
+                    android:textColor="#262628"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="4dp"
+                    android:text="30M"
+                    android:textColor="#262628"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/textview_toprice_id"/>
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textview_tienich_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="TIỆN ÍCH"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/button_wifi_id"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/custom_button_filter_tienich_choosenitems"
+                    android:drawableLeft="@drawable/ic_wifi"
+                    android:drawablePadding="15sp"
+                    android:drawableTint="@color/colorAccent"
+                    android:text="Wifi"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15sp"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent=".48"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_tienich_id"
+                    tools:ignore="RtlCompat" />
+
+                <Button
+                    android:id="@+id/button_bep_id"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="36dp"
+                    android:background="@drawable/custom_button_filter_tienich_unchoosenitems"
+                    android:drawableLeft="@drawable/ic_cook"
+                    android:drawablePadding="15sp"
+                    android:elevation="0dp"
+                    android:text="Bếp"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textColor="#262628"
+                    android:textSize="15sp"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent=".48"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RtlCompat" />
+
+                <Button
+                    android:id="@+id/button_airconditioner_id"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_button_filter_tienich_choosenitems"
+                    android:drawableLeft="@drawable/ic_air_conditioner"
+                    android:drawablePadding="15sp"
+                    android:drawableTint="@color/colorAccent"
+                    android:text="Máy lạnh"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15sp"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent=".48"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button_wifi_id"
+                    tools:ignore="RtlCompat" />
+
+                <Button
+                    android:id="@+id/button_parkingplace_id"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_button_filter_tienich_choosenitems"
+                    android:drawableLeft="@drawable/ic_parking"
+                    android:drawablePadding="15sp"
+                    android:drawableTint="@color/colorAccent"
+                    android:text="Chỗ đỗ xe"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15sp"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent=".48"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button_bep_id"
+                    tools:ignore="RtlCompat" />
+
+                <Button
+                    android:id="@+id/button_hotshower_id"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_button_filter_tienich_unchoosenitems"
+                    android:drawableLeft="@drawable/ic_hot_shower"
+                    android:drawablePadding="15sp"
+                    android:text="Máy nước nóng"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorBlackText"
+                    android:textSize="15sp"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent=".48"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button_airconditioner_id"
+                    tools:ignore="RtlCompat" />
+
+                <Button
+                    android:id="@+id/button_tv_id"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_button_filter_tienich_unchoosenitems"
+                    android:drawableLeft="@drawable/ic_tv"
+                    android:drawablePadding="15sp"
+                    android:text="Ti Vi"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorBlackText"
+                    android:textSize="15sp"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent=".48"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button_parkingplace_id"
+                    tools:ignore="RtlCompat" />
+
+                <Button
+                    android:id="@+id/button_swimmingpool_id"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_button_filter_tienich_unchoosenitems"
+                    android:drawableLeft="@drawable/ic_swimmingpool"
+                    android:drawablePadding="15sp"
+                    android:text="Hồ bơi"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorBlackText"
+                    android:textSize="15sp"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent=".48"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button_hotshower_id"
+                    tools:ignore="RtlCompat"/>
+
+                <Button
+                    android:id="@+id/button_bar_id"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_button_filter_tienich_unchoosenitems"
+                    android:drawableLeft="@drawable/ic_tv"
+                    android:drawablePadding="15sp"
+                    android:text="Quán bar"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorBlackText"
+                    android:textSize="15sp"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent=".48"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button_tv_id"
+                    tools:ignore="RtlCompat"/>
+
+                <Button
+                    android:id="@+id/button_invisible1"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:visibility="invisible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button_swimmingpool_id"
+                    tools:ignore="RtlCompat"/>
+
+                <Button
+                    android:id="@+id/button_invisible2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="6dp"
+                    android:cursorVisible="false"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button_bar_id" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textview_loaiphongLOAIP_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="LOẠI PHÒNG"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_loaiphongLOAIP_id">
+
+                    <RadioButton
+                        android:id="@+id/radbtn_phongdon_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Phòng đơn"
+                        android:textColorHighlight="@color/colorPrimary"
+                        android:background="@drawable/custome_radiobutton_filter"/>
+
+                    <RadioButton
+                        android:id="@+id/radbtn_phongdoi_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Phòng đôi"/>
+
+                    <RadioButton
+                        android:id="@+id/radbtn_phonggiadinh_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Phòng gia đình" />
+
+                    <RadioButton
+                        android:id="@+id/radbtn_phongnhom_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Phòng nhóm" />
+
+                </RadioGroup>
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="8dp"
+                    android:text="ĐÁNH GIÁ"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="4dp"
+                    android:text="2 - 5/sao"
+                    android:textColor="#262628"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <com.crystal.crystalrangeseekbar.widgets.CrystalRangeSeekbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_color="#EBEBEB"
+                app:bar_highlight_color="@color/colorPrimary"
+                app:left_thumb_color="@color/colorPrimary"
+                app:left_thumb_image="@drawable/rangeseekbar_thump_png"
+                app:right_thumb_image="@drawable/rangeseekbar_thump_png"
+                app:corner_radius="10"
+                app:min_value="1"
+                app:max_value="5"
+                android:id="@+id/seekbar_raterange_id"/>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="4dp"
+                    android:text="0 sao"
+                    android:textColor="#262628"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="4dp"
+                    android:text="5 sao"
+                    android:textColor="#262628"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="ÁP DỤNG"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:background="@drawable/custom_button_filter_apply"
+                android:layout_marginBottom="20dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

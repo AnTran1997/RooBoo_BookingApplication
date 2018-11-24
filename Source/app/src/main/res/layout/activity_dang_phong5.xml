@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DangPhong5">
+    <View
+        android:id="@+id/headerView"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/dangphong5_headerLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:text="Xác minh tài khoản"
+        android:textColor="@color/colorBlack"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/headerView"
+        app:layout_constraintStart_toStartOf="@+id/headerView"
+        app:layout_constraintTop_toBottomOf="@+id/headerView" />
+
+    <Button
+        android:id="@+id/dangphong5_cancelButton"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="52dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/white_button_background"
+        android:text="Huỷ"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/headerView"
+        app:layout_constraintEnd_toEndOf="@+id/headerView" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintTop_toBottomOf="@id/headerView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dangphong5_textview_thongtinphong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="THÔNG TIN PHÒNG"
+                android:textSize="16sp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:id="@+id/dangphong5_textview_tenphong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:paddingLeft="15dp"
+                    android:text="Tên phòng"
+                    android:textColor="@color/colorBlackText"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/dangphong5_edittext_tenphong"
+                    android:layout_width="fill_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/rounded_text_input_border"
+                    android:hint="Tối đa 80 kí tự"
+                    android:maxLength="80"
+                    android:padding="5dip"
+                    android:paddingStart="20dp"
+                    android:paddingLeft="20dp"
+                    android:singleLine="true"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dangphong5_textview_tenphong" />
+
+                <TextView
+                    android:id="@+id/dangphong5_textview_giaphong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:paddingLeft="15dp"
+                    android:text="Giá phòng (VNĐ/đêm)"
+                    android:textColor="@color/colorBlackText"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dangphong5_edittext_tenphong" />
+
+                <EditText
+                    android:id="@+id/dangphong5_edittext_giaphong"
+                    android:layout_width="fill_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/rounded_text_input_border"
+                    android:hint="1.500.000"
+                    android:maxLength="80"
+                    android:padding="5dip"
+                    android:paddingStart="20dp"
+                    android:paddingLeft="20dp"
+                    android:singleLine="true"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dangphong5_textview_giaphong" />
+
+                <TextView
+                    android:id="@+id/dangphong5_textview_thanhpho"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:paddingLeft="15dp"
+                    android:text="Thành phố"
+                    android:textColor="@color/colorBlackText"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dangphong5_edittext_giaphong" />
+
+                <Spinner
+                    android:id="@+id/dangphong5_spinner_thanhpho"
+                    android:layout_width="fill_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/rounded_text_input_border"
+                    android:spinnerMode="dropdown"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dangphong5_textview_thanhpho"></Spinner>
+
+                <TextView
+                    android:id="@+id/dangphong5_textview_quan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:paddingLeft="15dp"
+                    android:text="Quận"
+                    android:textColor="@color/colorBlackText"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dangphong5_spinner_thanhpho" />
+
+                <Spinner
+                    android:id="@+id/dangphong5_spinner_quan"
+                    android:layout_width="fill_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/rounded_text_input_border"
+                    android:spinnerMode="dropdown"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dangphong5_textview_quan"></Spinner>
+
+                <TextView
+                    android:id="@+id/dangphong5_textview_diachi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:paddingLeft="15dp"
+                    android:text="Địa chỉ"
+                    android:textColor="@color/colorBlackText"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dangphong5_spinner_quan" />
+
+                <Spinner
+                    android:id="@+id/dangphong5_spinner_diachi"
+                    android:layout_width="fill_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/rounded_text_input_border"
+                    android:spinnerMode="dropdown"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dangphong5_textview_diachi"></Spinner>
+
+                <TextView
+                    android:id="@+id/dangphong5_textview_loaiphong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:paddingLeft="15dp"
+                    android:text="Loại phòng"
+                    android:textColor="@color/colorBlackText"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dangphong5_spinner_diachi" />
+
+                <Spinner
+                    android:id="@+id/dangphong5_spinner_loaiphong"
+                    android:layout_width="fill_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/rounded_text_input_border"
+                    android:spinnerMode="dropdown"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dangphong5_textview_loaiphong"></Spinner>
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp">
+
+                <TextView
+                    android:id="@+id/textview_tienich_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="TIỆN ÍCH"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/button_wifi_id"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/custom_button_filter_tienich_choosenitems"
+                    android:drawableLeft="@drawable/ic_wifi"
+                    android:drawablePadding="15sp"
+                    android:drawableTint="@color/colorAccent"
+                    android:text="Wifi"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_tienich_id"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent=".48"
+                    tools:ignore="RtlCompat" />
+
+                <Button
+                    android:id="@+id/button_bep_id"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="36dp"
+                    android:background="@drawable/custom_button_filter_tienich_unchoosenitems"
+                    android:drawableLeft="@drawable/ic_cook"
+                    android:drawablePadding="15sp"
+                    android:elevation="0dp"
+                    android:text="Bếp"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textColor="#262628"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent=".48"
+                    tools:ignore="RtlCompat" />
+
+                <Button
+                    android:id="@+id/button_airconditioner_id"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_button_filter_tienich_choosenitems"
+                    android:drawableLeft="@drawable/ic_air_conditioner"
+                    android:drawablePadding="15sp"
+                    android:drawableTint="@color/colorAccent"
+                    android:text="Máy lạnh"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button_wifi_id"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent=".48"
+                    tools:ignore="RtlCompat" />
+
+                <Button
+                    android:id="@+id/button_parkingplace_id"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_button_filter_tienich_choosenitems"
+                    android:drawableLeft="@drawable/ic_parking"
+                    android:drawablePadding="15sp"
+                    android:drawableTint="@color/colorAccent"
+                    android:text="Chỗ đỗ xe"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button_bep_id"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent=".48"
+                    tools:ignore="RtlCompat" />
+
+                <Button
+                    android:id="@+id/button_hotshower_id"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_button_filter_tienich_unchoosenitems"
+                    android:drawableLeft="@drawable/ic_hot_shower"
+                    android:drawablePadding="15sp"
+                    android:text="Máy nước nóng"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorBlackText"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button_airconditioner_id"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent=".48"
+                    tools:ignore="RtlCompat" />
+
+                <Button
+                    android:id="@+id/button_tv_id"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_button_filter_tienich_unchoosenitems"
+                    android:drawableLeft="@drawable/ic_tv"
+                    android:drawablePadding="15sp"
+                    android:text="Ti Vi"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorBlackText"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button_parkingplace_id"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent=".48"
+                    tools:ignore="RtlCompat" />
+
+                <Button
+                    android:id="@+id/button_swimmingpool_id"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_button_filter_tienich_unchoosenitems"
+                    android:drawableLeft="@drawable/ic_swimmingpool"
+                    android:drawablePadding="15sp"
+                    android:text="Hồ bơi"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorBlackText"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button_hotshower_id"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent=".48"
+                    tools:ignore="RtlCompat" />
+
+                <Button
+                    android:id="@+id/button_bar_id"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_button_filter_tienich_unchoosenitems"
+                    android:drawableLeft="@drawable/ic_tv"
+                    android:drawablePadding="15sp"
+                    android:text="Quán bar"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorBlackText"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button_tv_id"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent=".48"
+                    tools:ignore="RtlCompat" />
+
+                <Button
+                    android:id="@+id/button_invisible1"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:visibility="invisible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button_swimmingpool_id"
+                    tools:ignore="RtlCompat" />
+
+                <Button
+                    android:id="@+id/button_invisible2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="6dp"
+                    android:cursorVisible="false"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button_bar_id" />
+
+
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp">
+
+                <TextView
+                    android:id="@+id/textview_diadiemgan_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="GẦN CÁC ĐỊA ĐIỂM"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <!--<com.google.android.gms.maps.MapView
+                android:id="@+id/dangphong5_mapView_diadiemgan"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="8dp"
+                tools:layout_editor_absoluteX="125dp" />-->
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/dangphong5_map"/>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp">
+
+                <TextView
+                    android:id="@+id/textview_diadiemgan_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="THÊM ẢNH PHÒNG"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/dangphong5_button_uploadhinh"
+                    android:layout_width="148dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/custom_button_filter_tienich_unchoosenitems"
+                    android:gravity="center"
+                    android:text="Tải ảnh lên"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_diadiemgan_id" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="(Tối thiểu 1 ảnh, tối đa 6 ảnh)"
+                    android:textColor="@color/colorBlackText"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dangphong5_button_uploadhinh" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <Button
+                android:id="@+id/dangphong5_button_hoantat"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Hoàn tất"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:background="@drawable/custom_button_filter_apply"
+                android:layout_margin="20dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:visibility="invisible"/>
+        </LinearLayout>
+
+
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
