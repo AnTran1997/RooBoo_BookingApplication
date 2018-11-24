@@ -14,5 +14,6 @@
     <color name="colorRatingActive">#2ACCFF</color>
     <color name="common_border_color">#2ACCFF</color>
     <color name="sage">#F6F6F6</color>
+    <color name="colorTransparent">#00ffffff</color>
 
 </resources>

@@ -1,4 +1,32 @@
 <resources>
     <string name="app_name">RooBoo</string>
     <string name="title_activity_search_view">SearchView</string>
+    <string-array name="spinnner_datphong5_thanhpho_items">
+        <item>Ho Chi Minh</item>
+        <item>Buon Ma Thuot</item>
+        <item>Ly Son Island</item>
+        <item>Da Lat</item>
+        <item>Hoi An</item>
+        <item>Hue</item>
+    </string-array>
+    <string-array name="spinnner_datphong5_quan_items">
+        <item>Quan 1</item>
+        <item>Quan 2</item>
+        <item>Quan 3</item>
+        <item>Quan 4</item>
+        <item>Quan 5</item>
+        <item>Quan 6</item>
+        <item>Quan 7</item>
+        <item>Quan 8</item>
+        <item>Quan 9</item>
+        <item>Quan 10</item>
+        <item>Quan 11</item>
+        <item>Quan 12</item>
+    </string-array>
+    <string-array name="spinnner_datphong5_loaiphong_items">
+        <item>Phòng đơn</item>
+        <item>Phòng đôi</item>
+        <item>Phòng nhóm</item>
+        <item>Phòng gia đình</item>
+    </string-array>
 </resources>

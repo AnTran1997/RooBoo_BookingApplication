@@ -144,8 +144,8 @@
                     android:layout_width="fill_parent"
                     android:layout_height="42dp"
                     android:layout_marginTop="8dp"
-                    android:background="@drawable/rounded_text_input_border"
                     android:spinnerMode="dropdown"
+                    android:background="@drawable/custom_spinner_roundborder"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/dangphong5_textview_thanhpho"></Spinner>
 
@@ -166,7 +166,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="42dp"
                     android:layout_marginTop="8dp"
-                    android:background="@drawable/rounded_text_input_border"
+                    android:background="@drawable/custom_spinner_roundborder"
                     android:spinnerMode="dropdown"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/dangphong5_textview_quan"></Spinner>
@@ -183,7 +183,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/dangphong5_spinner_quan" />
 
-                <Spinner
+                <!--<Spinner
                     android:id="@+id/dangphong5_spinner_diachi"
                     android:layout_width="fill_parent"
                     android:layout_height="42dp"
@@ -191,7 +191,24 @@
                     android:background="@drawable/rounded_text_input_border"
                     android:spinnerMode="dropdown"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/dangphong5_textview_diachi"></Spinner>
+                    app:layout_constraintTop_toBottomOf="@+id/dangphong5_textview_diachi"></Spinner>-->
+
+                <EditText
+                    android:id="@+id/dangphong5_edittext_diachi"
+                    android:layout_width="fill_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/rounded_text_input_border"
+                    android:hint="Số nhà, tên đường, phường"
+                    android:maxLength="80"
+                    android:padding="5dip"
+                    android:paddingStart="20dp"
+                    android:paddingLeft="20dp"
+                    android:singleLine="true"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dangphong5_textview_diachi" />
+
 
                 <TextView
                     android:id="@+id/dangphong5_textview_loaiphong"
@@ -203,14 +220,14 @@
                     android:textColor="@color/colorBlackText"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/dangphong5_spinner_diachi" />
+                    app:layout_constraintTop_toBottomOf="@+id/dangphong5_edittext_diachi" />
 
                 <Spinner
                     android:id="@+id/dangphong5_spinner_loaiphong"
                     android:layout_width="fill_parent"
                     android:layout_height="42dp"
                     android:layout_marginTop="8dp"
-                    android:background="@drawable/rounded_text_input_border"
+                    android:background="@drawable/custom_spinner_roundborder"
                     android:spinnerMode="dropdown"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/dangphong5_textview_loaiphong"></Spinner>
@@ -465,7 +482,7 @@
 
                 <Button
                     android:id="@+id/dangphong5_button_uploadhinh"
-                    android:layout_width="148dp"
+                    android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
@@ -475,6 +492,8 @@
                     android:background="@drawable/custom_button_dangphong5_upload"
                     android:gravity="center"
                     android:text="Tải ảnh lên"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent=".6"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textview_diadiemgan_id" />
