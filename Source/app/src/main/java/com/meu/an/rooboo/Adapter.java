@@ -46,8 +46,8 @@ public class Adapter extends ArrayAdapter {
         ImageView imgHotel= listItem.findViewById(R.id.imgHotel);
         imgHotel.setImageResource(room.getImageHotel());
 
-        TextView txtAddress= listItem.findViewById(R.id.txtAddress);
-        txtAddress.setText(room.getAddress());
+        //TextView txtAddress= listItem.findViewById(R.id.txtAddress);
+        //txtAddress.setText(room.getAddress());
 
         TextView txtNameHotel= listItem.findViewById(R.id.txtNameHotel);
         txtNameHotel.setText(room.getNameHotel());
@@ -55,14 +55,14 @@ public class Adapter extends ArrayAdapter {
         TextView txtPrice= listItem.findViewById(R.id.txtPrice);
         txtPrice.setText(room.getPrice());
 
-        TextView txtComment= listItem.findViewById(R.id.txtComment);
-        txtComment.setText(room.getComment());
+        //TextView txtComment= listItem.findViewById(R.id.txtComment);
+        //txtComment.setText(room.getComment());
 
-        TextView txtBath= listItem.findViewById(R.id.txtBath);
-        txtBath.setText(room.getBath());
+        //TextView txtBath= listItem.findViewById(R.id.txtBath);
+        //txtBath.setText(room.getBath());
 
-        TextView txtBed= listItem.findViewById(R.id.txtBed);
-        txtBed.setText(room.getBed());;
+        //TextView txtBed= listItem.findViewById(R.id.txtBed);
+        //txtBed.setText(room.getBed());;
 
 //        ImageView image = (ImageView)listItem.findViewById(R.id.imageView_poster);
 //        image.setImageResource(currentMovie.getImageHotel());

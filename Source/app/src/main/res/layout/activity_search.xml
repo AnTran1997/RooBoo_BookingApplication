@@ -1,122 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:jp="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackground"
-    tools:context="com.meu.an.rooboo.SearchActivity">
+    tools:context="com.meu.an.rooboo.SearchActivity"
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/sfdisplay"
-        android:text="Tìm kiếm"
-        android:textColor="#262628"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.054"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/semibold"
+            android:text="Tìm kiếm"
+            android:textColor="#262628"
+            android:textSize="28sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="23dp"
+            android:textStyle="bold"/>
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.959"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_notification" />
+        <ImageView
+            android:id="@+id/filter"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_filter"
+            android:layout_marginTop="27dp"
+            android:layout_marginLeft="160dp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="21dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_noti"
+            android:layout_marginTop="27dp"
+            android:layout_marginLeft="10dp" />
+    </LinearLayout>
+
 
     <SearchView
         android:id="@+id/searchView"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="19dp"
         android:background="@drawable/bg_white_rounded"
-        android:elevation="2dp"
-        android:queryHint="Nhập địa điểm. Ví dụ: Hội An..."
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.068"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"></SearchView>
+        android:elevation="1mm">
+    </SearchView>
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="102sp"
-        android:layout_height="44sp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="88dp"
-        android:background="@drawable/rounded_corner"
-        android:fontFamily="@font/sfdisplay"
-        android:gravity="center"
-        android:text="Ngày"
-        android:textColor="#2ACCFF"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.044"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="117sp"
-        android:layout_height="44sp"
-        android:layout_marginTop="88dp"
-        android:background="@drawable/rounded_corner"
-        android:fontFamily="@font/sfdisplay"
-        android:gravity="center"
-        android:text="Số người"
-        android:textColor="#2ACCFF"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.111"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="152dp"
-        android:background="#FFFFFF"
-        android:fontFamily="@font/sfdisplay"
         android:text="GỢI Ý CHO BẠN"
-        android:textColor="#000000"
         android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.48"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        android:fontFamily="@font/medium"
+        android:layout_marginLeft="16sp"
+        android:layout_marginTop="24sp"
+        android:textColor="#000"/>
 
-    <ListView
+
+    <view class="android.support.v7.app.AlertController$RecycleListView"
         android:id="@+id/lv"
-        android:layout_width="0dp"
-        android:layout_height="400dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="232dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:background="#FFFFFF"
         android:divider="@color/sage"
-        android:dividerHeight="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:dividerHeight="10dp"
+        android:scrollbars="none"
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_scrollFlags="scroll|enterAlways|snap" />
 
 
-</android.support.constraint.ConstraintLayout>
+
+</LinearLayout>
