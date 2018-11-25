@@ -2,6 +2,8 @@ package com.meu.an.rooboo;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity {
     //SeekBar priceBooking;
@@ -29,5 +31,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });*/
+
     }
 }

@@ -13,6 +13,11 @@
     <color name="colorRatingNormal">#008577</color>
     <color name="colorRatingActive">#2ACCFF</color>
     <color name="common_border_color">#2ACCFF</color>
+<<<<<<< HEAD
     <color name="sage">#fff</color>
+=======
+    <color name="sage">#F6F6F6</color>
+    <color name="colorTransparent">#00ffffff</color>
+>>>>>>> d35902ecf87bb6383dc02bb8b3ddc0fff05cac9b
 
 </resources>
