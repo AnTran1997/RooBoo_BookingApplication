@@ -9,62 +9,79 @@
     tools:context="com.meu.an.rooboo.SearchActivity"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/semibold"
+                android:text="Tìm kiếm"
+                android:textColor="#262628"
+                android:textSize="28sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="23dp"
+                android:textStyle="bold"/>
+
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="200dp">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:srcCompat="@drawable/ic_bell"/>
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right">
+                    <View
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:background="@drawable/noti_push"></View>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2"
+                        android:textColor="#fff"
+                        android:textSize="8sp"
+                        android:fontFamily="@font/semibold"
+                        android:layout_gravity="center" />
+                </FrameLayout>
+
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="19dp"
+            android:background="@drawable/bg_white_rounded"
+            android:elevation="1mm">
+        </SearchView>
+
         <TextView
-            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/semibold"
-            android:text="Tìm kiếm"
-            android:textColor="#262628"
-            android:textSize="28sp"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="23dp"
-            android:textStyle="bold"/>
+            android:text="GỢI Ý CHO BẠN"
+            android:textSize="14sp"
+            android:fontFamily="@font/medium"
+            android:layout_marginLeft="16sp"
+            android:layout_marginTop="24sp"
+            android:textColor="#000"/>
 
-        <ImageView
-            android:id="@+id/filter"
-            android:layout_width="20dp"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_filter"
-            android:layout_marginTop="27dp"
-            android:layout_marginLeft="160dp" />
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="21dp"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_noti"
-            android:layout_marginTop="27dp"
-            android:layout_marginLeft="10dp" />
-    </LinearLayout>
-
-
-    <SearchView
-        android:id="@+id/searchView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="19dp"
-        android:background="@drawable/bg_white_rounded"
-        android:elevation="1mm">
-    </SearchView>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="GỢI Ý CHO BẠN"
-        android:textSize="14sp"
-        android:fontFamily="@font/medium"
-        android:layout_marginLeft="16sp"
-        android:layout_marginTop="24sp"
-        android:textColor="#000"/>
-
-
-    <view class="android.support.v7.app.AlertController$RecycleListView"
+       <ListView
         android:id="@+id/lv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -72,13 +89,11 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:background="#FFFFFF"
-        android:divider="@color/sage"
+        android:divider="@color/space"
         android:dividerHeight="10dp"
         android:scrollbars="none"
         android:clipToPadding="false"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         app:layout_scrollFlags="scroll|enterAlways|snap" />
-
-
-
 </LinearLayout>
+
