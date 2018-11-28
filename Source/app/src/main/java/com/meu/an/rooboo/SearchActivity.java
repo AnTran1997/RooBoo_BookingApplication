@@ -12,6 +12,8 @@ import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
+
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
@@ -26,6 +28,7 @@ public class SearchActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
+
         searchView=(SearchView) findViewById(R.id.searchView);
         searchView.setQueryHint("Nhập địa điểm. Ví dụ: Hội An...");
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {

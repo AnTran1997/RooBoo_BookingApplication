@@ -95,5 +95,6 @@
         android:clipToPadding="false"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         app:layout_scrollFlags="scroll|enterAlways|snap" />
+
 </LinearLayout>
 
